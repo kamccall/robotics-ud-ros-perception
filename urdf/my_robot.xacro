@@ -67,7 +67,7 @@
     </visual>
   </link>
   
-  <!-- left revolute wheel definition -->
+  <!-- left continuous wheel definition -->
   <link name="left_wheel">
     <inertial>
       <mass value="5.0" />
@@ -94,7 +94,7 @@
     </visual>                                                                         
   </link>
   
-  <!-- right revolute wheel definition -->
+  <!-- right continuous wheel definition -->
   <link name="right_wheel">
     <inertial>
       <mass value="5.0" />
