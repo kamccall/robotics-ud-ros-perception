@@ -22,6 +22,7 @@
       />
     </inertial>
       
+    <!-- main body appearance defintion -->
     <collision name="collision">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
@@ -36,7 +37,7 @@
       </geometry>
     </visual>
     
-    <!-- back caster definition -->
+    <!-- back caster appearance definition -->
     <collision name='back_caster_collision'>
       <origin xyz="-0.15 0 -0.05" rpy="0 0 0" />
       <geometry>
@@ -51,7 +52,7 @@
       </geometry>
     </visual>
 
-    <!-- front caster definition -->
+    <!-- front caster appearance definition -->
     <collision name='front_caster_collision'>
       <origin xyz="0.15 0 -0.05" rpy="0 0 0" />
       <geometry>
@@ -121,7 +122,7 @@
     </visual>                                                                         
   </link>
   
-  <!-- left wheel joint -->
+  <!-- left wheel joint (connected to chassis) -->
   <joint type="continuous" name="left_wheel_hinge">
     <origin xyz="0 0.15 0" rpy="0 0 0" />
     <child link="left_wheel" />
@@ -131,7 +132,7 @@
     <dynamics damping="1.0" friction="1.0" />
   </joint>
   
-  <!-- right wheel joint -->
+  <!-- right wheel joint (connected to chassis) -->
   <joint type="continuous" name="right_wheel_hinge">
     <origin xyz="0 -0.15 0" rpy="0 0 0" />
     <child link="right_wheel" />
