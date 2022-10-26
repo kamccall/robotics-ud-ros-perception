@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <!-- DEF: robot has core footprint, rectangular chassis, left and right wheels, and left and right casters.    -->
+  <!-- DEF: robot has core footprint, rectangular chassis, left and right wheels, and front and back casters.    -->
   <!--       all six objects have appearances and are connected through joints, creating the entire robot frame. -->
   <link name="robot_footprint" />
   
@@ -25,7 +25,7 @@
     </inertial>
       
     <!-- main body appearance defintion -->
-    <collision name="collision">
+    <collision name="chassis_collision">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
         <box size=".4 .2 .1" />
@@ -144,5 +144,33 @@
     <dynamics damping="1.0" friction="1.0" />
   </joint>
   
+  <!-- camera sensor definition  -->
+  <link name="camera">
+    <box_inertia m="0.1" x="0.05" y="0.05" z="0.05" />
+    
+    <inertial>
+      <mass value="0.1" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia
+         ixx="1e-6" ixy="0" ixz="0"
+         iyy="1e-6" iyz="0"
+         izz="1e-6"
+      />
+    </inertial>
+    
+    <collision name="camera_collision">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+    
+    <visual name="camera_visual">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </visual>
+  </link>
 </robot>
                    
