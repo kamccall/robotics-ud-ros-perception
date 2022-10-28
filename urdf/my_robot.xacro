@@ -1,7 +1,9 @@
 <?xml version='1.0'?>
+<!-- DEF: robot has core footprint, rectangular chassis, left and right wheels, and front and back casters.    -->
+<!--       all six objects have appearances and are connected through joints, creating the entire robot frame. -->
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <!-- DEF: robot has core footprint, rectangular chassis, left and right wheels, and front and back casters.    -->
-  <!--       all six objects have appearances and are connected through joints, creating the entire robot frame. -->
+  <xacro:include filename="$(find my_robot)/urdf/my_robot.gazebo" />
+  
   <link name="robot_footprint" />
   
   <joint name="robot_footprint_joint" type="fixed">
