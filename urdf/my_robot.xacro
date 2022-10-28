@@ -2,6 +2,7 @@
 <!-- DEF: robot has core footprint, rectangular chassis, left and right wheels, and front and back casters.    -->
 <!--       all six objects have appearances and are connected through joints, creating the entire robot frame. -->
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- include below will add gazebo file that defines three necessary plug-ins for actuators, camera and lidar -->
   <xacro:include filename="$(find my_robot)/urdf/my_robot.gazebo" />
   
   <link name="robot_footprint" />
