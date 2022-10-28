@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot>
 
+  <!-- wheel joints actuator plug-in -->
   <gazebo>
     <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
       <legacyMode>false</legacyMode>
@@ -26,7 +27,7 @@
     </plugin>
   </gazebo>
 
-  <!-- camera -->
+  <!-- camera plug-in -->
   <gazebo reference="camera">
     <sensor type="camera" name="camera1">
       <update_rate>30.0</update_rate>
@@ -59,7 +60,7 @@
     </sensor>
   </gazebo>
 
-  <!-- hokuyo -->
+  <!-- hokuyo plug-in -->
   <gazebo reference="hokuyo">
     <sensor type="ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
