@@ -29,9 +29,9 @@ void process_image_callback(const sensor_msgs::Image img)
   int column_found = 0;
   
   // loop through pixels to look for white ball (by looking for white_pixel pixel value)
-  for (int i = 0; i < img.height * img.step; i++)
+  for (int i = 0; i < img.height * img.step; i+=3)
   {
-    if (img.data[i] == white_pixel)            // white ball found, so set movement values
+    if (img.data[i] == white_pixel && img.data[i+1] == white_pixel && img.data[i+2] == white_pixel) // if white ball found, set movement values
     {
       value_x = velocity_forward;              // will move forward in all cases
       column_found = i % img.step;             // identify which 'column' in image ball found
