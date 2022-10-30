@@ -4,9 +4,9 @@
 using namespace std;
 
 ros::ServiceClient client;
-float velocity_forward =  0.15;
-float velocity_left    =  0.20;
-float velocity_right   = -0.20;
+float velocity_forward =  0.15;   // default speed for linear x value
+float velocity_left    =  0.20;   // default speed for angular z left value
+float velocity_right   = -0.20;   // default speed for angular z right value
 
 void drive_robot(float lin_x, float ang_z)
 {
