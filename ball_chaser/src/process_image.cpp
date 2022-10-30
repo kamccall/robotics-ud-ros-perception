@@ -4,6 +4,9 @@
 using namespace std;
 
 ros::ServiceClient client;
+float velocity_forward =  0.15;
+float velocity_left    =  0.20;
+float velocity_right   = -0.20;
 
 void drive_robot(float lin_x, float ang_z)
 {
@@ -30,13 +33,13 @@ void process_image_callback(const sensor_msgs::Image img)
   {
     if (img.data[i] == white_pixel)            // white ball found, so set movement values
     {
-      value_x = 0.1;                           // will move forward in all cases
+      value_x = velocity_forward;              // will move forward in all cases
       column_found = i % img.step;             // identify which 'column' in image ball found
       
       if (column_found < img.step / 3)         // found on left side
-        value_z = 0.1;
+        value_z = velocity_left;
       else if (column_found > img.step*2 / 3)  // found on right side
-        value_z = -0.1;
+        value_z = velocity_right;
     }
   }
   
