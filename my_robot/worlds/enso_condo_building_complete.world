@@ -9723,7 +9723,7 @@
           <wrench>-37.8522 0.788589 76.3907 0 -0 0</wrench>
         </link>
       </model>
-      -->
+      KM END COMMENTS -->
       <model name='r2'>
         <pose frame=''>-5.17528 0.115702 0.050797 -0.000794 -3e-06 0.039795</pose>
         <scale>1 1 1</scale>
