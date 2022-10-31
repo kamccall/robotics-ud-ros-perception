@@ -22,7 +22,7 @@
     <arg name="world_name" value="$(arg world_file)"/>
   </include>
   
-  <!-- find my_robot description (obtains robot description stored in parameter server -->
+  <!-- find my_robot description (obtains robot description stored in parameter server) -->
   <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find my_robot)/urdf/my_robot.xacro'" />
   
   <!-- spawn my_robot (generates the URDF from the XACRO file robot definition) -->
