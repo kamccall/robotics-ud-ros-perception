@@ -40,7 +40,6 @@
       <geometry>
         <box size=".48 .24 .12" />
       </geometry>
-      <material>Gazebo/SkyBlue</material>
     </visual>
     
     <!-- back caster appearance definition -->
