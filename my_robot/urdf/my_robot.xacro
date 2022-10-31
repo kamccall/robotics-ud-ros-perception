@@ -161,7 +161,7 @@
   
   <!-- camera sensor definition  -->
   <link name="camera">
-    <box_inertia m="0.1" x="0.05" y="0.05" z="0.05" />
+    <box_inertia x="0.05" y="0.05" z="0.05" m="0.1" />
   
     <inertial>
       <mass value="0.1" />
