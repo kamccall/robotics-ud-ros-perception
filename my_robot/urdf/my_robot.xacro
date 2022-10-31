@@ -40,7 +40,7 @@
       <geometry>
         <box size=".48 .24 .12" />
       </geometry>
-      <material name="Gazebo/SkyBlue" />
+      <material>Gazebo/SkyBlue</material>
     </visual>
     
     <!-- back caster appearance definition -->
@@ -74,6 +74,10 @@
     </visual>
   </link>
   
+  <gazebo reference="chassis">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  
   <!-- left continuous wheel definition -->
   <link name="left_wheel">
     <inertial>
@@ -100,6 +104,10 @@
       </geometry>
     </visual>                                                                         
   </link>
+  
+  <gazebo reference="left_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
   
   <!-- right continuous wheel definition -->
   <link name="right_wheel">
@@ -128,6 +136,10 @@
     </visual>                                                                         
   </link>
   
+  <gazebo reference="right_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
+    
   <!-- left wheel joint (connected to chassis) -->
   <joint type="continuous" name="left_wheel_hinge">
     <origin xyz="0 0.18 0" rpy="0 0 0" />
