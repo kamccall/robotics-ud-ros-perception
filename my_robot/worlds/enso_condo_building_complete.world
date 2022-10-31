@@ -9700,6 +9700,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      <!-- KM COMMENTING OUT ROBOT
       <model name='my_robot'>
         <pose frame=''>2.50057 -3.09999 0.12 1e-06 0.000256 1.57084</pose>
         <scale>1 1 1</scale>
@@ -9722,6 +9723,7 @@
           <wrench>-37.8522 0.788589 76.3907 0 -0 0</wrench>
         </link>
       </model>
+      -->
       <model name='r2'>
         <pose frame=''>-5.17528 0.115702 0.050797 -0.000794 -3e-06 0.039795</pose>
         <scale>1 1 1</scale>
@@ -10175,6 +10177,7 @@
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+    <!-- KM COMMENTING OUT ROBOT
     <model name='my_robot'>
       <link name='robot_footprint'>
         <pose frame=''>0 0 0 0 -0 0</pose>
@@ -10602,6 +10605,7 @@
       </plugin>
       <pose frame=''>2.5 -3.1 0 0 -0 1.571</pose>
     </model>
+    KM END COMMENTS -->
     <model name='my_ball'>
       <link name='link_0'>
         <pose frame=''>-0 -0 0 0 -0 0</pose>
