@@ -21,6 +21,8 @@ bool handle_drive_request(ball_chaser::DriveToTarget::Request& req, ball_chaser:
 
   res.msg_feedback = "setting linear.x: " + std::to_string(motor_command.linear.x) + " angular.z: " + std::to_string(motor_command.angular.z);
   ROS_INFO_STREAM(res.msg_feedback);
+  
+  return true;
 }
 
 int main(int argc, char** argv)
@@ -37,8 +39,15 @@ int main(int argc, char** argv)
   // advertise service endpoint so other clients can send movement commands to robot
   ros::ServiceServer service = n.advertiseService("/ball_chaser/command_robot", handle_drive_request);
 
-  std::cout << "ready to receive movement commands on command_robot endpoint...\n";
-  ros::spin();
-
+  if (service)
+  {
+    std::cout << "service started: ready to receive movement commands on command_robot endpoint...\n";
+    ros::spin();
+  }
+  else
+  {
+    ROS_WARN("failed to start drive request service...");
+  }
+  
   return 0;
 }
